@@ -26,7 +26,11 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-attachment: fixed;
+    background-attachment: scroll;
+  }
+
+  @media (min-width: 701px) {
+    body { background-attachment: fixed; }
   }
 
   .stage {
@@ -49,14 +53,13 @@
   /* Nav row */
   .nav {
     position: absolute;
-    top: -4%;
+    top: -8%;
     left: 0;
     width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    gap: 9%;
-    padding: 0 8%;
+    padding: 0 2%;
     z-index: 10;
   }
 
@@ -83,7 +86,7 @@
   /* Lace + flowers centerpiece */
   .centerpiece {
     position: absolute;
-    top: 12%;
+    top: 8%;
     left: 50%;
     transform: translateX(-50%);
     width: min(58%, 520px);
@@ -104,9 +107,9 @@
 
   .flower {
     position: absolute;
-    top: -6%;
-    left: -30%;
-    width: 60%;
+    top: 4%;
+    left: -16%;
+    width: 32%;
     z-index: 2;
     pointer-events: none;
   }
@@ -136,7 +139,7 @@
   /* Tagline */
   .tagline {
     position: absolute;
-    bottom: -14%;
+    bottom: -10%;
     left: 46%;
     transform: translateX(-50%);
     text-align: center;
@@ -150,23 +153,26 @@
 
   /* Responsive */
   @media (max-width: 700px) {
-    .composition { aspect-ratio: 9 / 14; }
+    .composition { aspect-ratio: 9 / 16; min-height: 100vh; }
 
     .nav {
-      flex-wrap: wrap;
-      row-gap: 18px;
-      gap: 6%;
-      padding: 0 4%;
+      position: relative;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 22px 12px;
+      padding: 24px 6%;
       justify-content: center;
+      justify-items: center;
+      top: 0;
     }
-    .nav a img { height: 44px; }
+    .nav a img { height: 38px; }
 
-    .centerpiece { top: 24%; width: 78%; }
-    .flower { width: 64%; top: -12%; left: -28%; }
+    .centerpiece { position: relative; top: 8%; width: 88%; margin: 0 auto; }
+    .flower { width: 36%; top: 2%; left: -14%; }
     .studio-title { top: 43%; width: 80%; }
     .stamp { width: 30%; bottom: 6%; }
-    .tagline img { height: 44px; }
-    .tagline { bottom: -3%; }
+    .tagline img { height: 38px; }
+    .tagline { position: relative; bottom: 0; margin-top: 36px; left: 50%; }
   }
 </style>
 </head>
@@ -178,13 +184,14 @@
     <nav class="nav">
       <a href="about.html" aria-label="About"><img src="assets/about.png" alt="About"></a>
       <a href="gallery.html" aria-label="Gallery"><img src="assets/gallery.png" alt="Gallery"></a>
+      <a href="services.html" aria-label="Services"><img src="assets/services.png" alt="Services"></a>
       <a href="contact.html" aria-label="Contact"><img src="assets/contact.png" alt="Contact"></a>
       <a href="love-notes.html" aria-label="Love Notes"><img src="assets/love_notes.png" alt="Love Notes"></a>
     </nav>
 
     <div class="centerpiece">
       <div class="lace-wrap">
-        <img class="flower" src="assets/flower.png" alt="">
+        <img class="flower" src="assets/flower2.png" alt="">
         <img class="lace" src="assets/lace.png" alt="Ayv Studio lace">
         <img class="studio-title" src="assets/ayv_studio.png" alt="Ayv Studio">
         <img class="stamp" src="assets/stamp.png" alt="">
