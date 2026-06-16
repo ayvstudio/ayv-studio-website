@@ -49,7 +49,7 @@
   /* Nav row */
   .nav {
     position: absolute;
-    top: 2%;
+    top: -2%;
     left: 0;
     width: 100%;
     display: flex;
@@ -60,8 +60,8 @@
 
   .nav a {
     display: block;
-    height: 34px;
-    opacity: 0.78;
+    height: 46px;
+    opacity: 0.85;
     transition: opacity 0.25s ease, transform 0.25s ease;
   }
 
@@ -76,12 +76,12 @@
     display: block;
   }
 
-  .nav a img { height: 30px; }
+  .nav a img { height: 42px; }
 
   /* Lace + flowers centerpiece */
   .centerpiece {
     position: absolute;
-    top: 14%;
+    top: 16%;
     left: 50%;
     transform: translateX(-50%);
     width: min(58%, 520px);
@@ -100,9 +100,9 @@
 
   .flower {
     position: absolute;
-    top: -14%;
-    left: -22%;
-    width: 46%;
+    top: -22%;
+    left: -30%;
+    width: 60%;
     pointer-events: none;
   }
 
@@ -118,9 +118,9 @@
 
   .stamp {
     position: absolute;
-    bottom: -10%;
-    right: -10%;
-    width: 22%;
+    bottom: -4%;
+    right: -6%;
+    width: 20%;
     transform: rotate(-6deg);
     filter: drop-shadow(0 6px 10px rgba(0,0,0,0.12));
     pointer-events: none;
@@ -129,11 +129,11 @@
   /* Tagline */
   .tagline {
     position: absolute;
-    bottom: 4%;
+    bottom: 0%;
     left: 50%;
     transform: translateX(-50%);
-    width: 70%;
-    max-width: 560px;
+    width: 85%;
+    max-width: 680px;
     text-align: center;
   }
 
@@ -151,12 +151,13 @@
       row-gap: 18px;
       justify-content: space-between;
     }
-    .nav a img { height: 22px; }
+    .nav a img { height: 28px; }
 
-    .centerpiece { top: 22%; width: 78%; }
+    .centerpiece { top: 24%; width: 78%; }
+    .flower { width: 64%; top: -20%; left: -28%; }
     .studio-title { top: 43%; width: 80%; }
     .stamp { width: 26%; }
-    .tagline { width: 88%; bottom: 6%; }
+    .tagline { width: 92%; bottom: 2%; }
   }
 </style>
 </head>
