@@ -84,11 +84,14 @@
     left: 50%;
     transform: translateX(-50%);
     width: min(58%, 520px);
+    isolation: isolate;
+    background: var(--bg);
   }
 
   .lace-wrap {
     position: relative;
     width: 100%;
+    isolation: isolate;
   }
 
   .lace {
@@ -96,6 +99,8 @@
     display: block;
     mix-blend-mode: multiply;
     filter: drop-shadow(0 18px 30px rgba(0,0,0,0.06));
+    position: relative;
+    z-index: 1;
   }
 
   .flower {
@@ -105,6 +110,7 @@
     width: 46%;
     mix-blend-mode: multiply;
     pointer-events: none;
+    z-index: 2;
   }
 
   .studio-title {
@@ -116,6 +122,7 @@
     max-width: 460px;
     mix-blend-mode: multiply;
     pointer-events: none;
+    z-index: 3;
   }
 
   .stamp {
@@ -172,23 +179,23 @@
   <div class="composition">
 
     <nav class="nav">
-      <a href="about.html" aria-label="About"><img src="assets/Ayv_Website_white_back_about.png" alt="About"></a>
-      <a href="gallery.html" aria-label="Gallery"><img src="assets/Ayv_Website_white_back_gallery.png" alt="Gallery"></a>
-      <a href="contact.html" aria-label="Contact"><img src="assets/Ayv_Website_white_back_contact.png" alt="Contact"></a>
-      <a href="love-notes.html" aria-label="Love Notes"><img src="assets/Ayv_Website_white_back_love_notes.png" alt="Love Notes"></a>
+      <a href="about.html" aria-label="About"><img src="Ayv_Website_white_back_about.png" alt="About"></a>
+      <a href="gallery.html" aria-label="Gallery"><img src="Ayv_Website_white_back_gallery.png" alt="Gallery"></a>
+      <a href="contact.html" aria-label="Contact"><img src="Ayv_Website_white_back_contact.png" alt="Contact"></a>
+      <a href="love-notes.html" aria-label="Love Notes"><img src="Ayv_Website_white_back_love_notes.png" alt="Love Notes"></a>
     </nav>
 
     <div class="centerpiece">
       <div class="lace-wrap">
-        <img class="flower" src="assets/Ayv_Website_white_back_flower.png" alt="">
-        <img class="lace" src="assets/Ayv_Website_white_back-10.png" alt="Ayv Studio lace">
-        <img class="studio-title" src="assets/Ayv_Website_white_back_ayv_studio.png" alt="Ayv Studio">
-        <img class="stamp" src="assets/Ayv_Website_white_back_stamp.png" alt="">
+        <img class="flower" src="Ayv_Website_white_back_flower.png" alt="">
+        <img class="lace" src="Ayv_Website_white_back-10.png" alt="Ayv Studio lace">
+        <img class="studio-title" src="Ayv_Website_white_back_ayv_studio.png" alt="Ayv Studio">
+        <img class="stamp" src="Ayv_Website_white_back_stamp.png" alt="">
       </div>
     </div>
 
     <div class="tagline">
-      <img src="assets/Ayv_Website_better_or_worse.png" alt="For better, for worse, and for everything in between.">
+      <img src="Ayv_Website_better_or_worse.png" alt="For better, for worse, and for everything in between.">
     </div>
 
   </div>
