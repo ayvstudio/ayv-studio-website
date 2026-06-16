@@ -53,14 +53,16 @@
     left: 0;
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+    gap: 9%;
+    padding: 0 8%;
     z-index: 10;
   }
 
   .nav a {
     display: block;
-    height: 52px;
+    height: 104px;
     opacity: 0.85;
     transition: opacity 0.25s ease, transform 0.25s ease;
   }
@@ -76,12 +78,12 @@
     display: block;
   }
 
-  .nav a img { height: 48px; }
+  .nav a img { height: 96px; }
 
   /* Lace + flowers centerpiece */
   .centerpiece {
     position: absolute;
-    top: 16%;
+    top: 12%;
     left: 50%;
     transform: translateX(-50%);
     width: min(58%, 520px);
@@ -100,7 +102,7 @@
 
   .flower {
     position: absolute;
-    top: -22%;
+    top: -14%;
     left: -30%;
     width: 60%;
     pointer-events: none;
@@ -118,9 +120,9 @@
 
   .stamp {
     position: absolute;
-    bottom: -4%;
-    right: -6%;
-    width: 20%;
+    bottom: 4%;
+    right: -10%;
+    width: 26%;
     transform: rotate(-6deg);
     filter: drop-shadow(0 6px 10px rgba(0,0,0,0.12));
     pointer-events: none;
@@ -129,11 +131,11 @@
   /* Tagline */
   .tagline {
     position: absolute;
-    bottom: -2%;
+    bottom: -6%;
     left: 50%;
     transform: translateX(-50%);
-    width: 95%;
-    max-width: 760px;
+    width: 100%;
+    max-width: 1000px;
     text-align: center;
   }
 
@@ -149,15 +151,17 @@
     .nav {
       flex-wrap: wrap;
       row-gap: 18px;
-      justify-content: space-between;
+      gap: 6%;
+      padding: 0 4%;
+      justify-content: center;
     }
-    .nav a img { height: 28px; }
+    .nav a img { height: 44px; }
 
     .centerpiece { top: 24%; width: 78%; }
-    .flower { width: 64%; top: -20%; left: -28%; }
+    .flower { width: 64%; top: -12%; left: -28%; }
     .studio-title { top: 43%; width: 80%; }
-    .stamp { width: 26%; }
-    .tagline { width: 92%; bottom: 2%; }
+    .stamp { width: 30%; bottom: 6%; }
+    .tagline { width: 96%; bottom: -3%; }
   }
 </style>
 </head>
