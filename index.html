@@ -22,6 +22,11 @@
   body {
     font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
     color: var(--ink);
+    background-image: url('assets/paper.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
   }
 
   .stage {
@@ -69,13 +74,9 @@
     height: 100%;
     width: auto;
     display: block;
-    mix-blend-mode: multiply;
   }
 
-  .nav a:nth-child(1) img { height: 30px; }
-  .nav a:nth-child(2) img { height: 30px; }
-  .nav a:nth-child(3) img { height: 30px; }
-  .nav a:nth-child(4) img { height: 30px; }
+  .nav a img { height: 30px; }
 
   /* Lace + flowers centerpiece */
   .centerpiece {
@@ -84,23 +85,17 @@
     left: 50%;
     transform: translateX(-50%);
     width: min(58%, 520px);
-    isolation: isolate;
-    background: var(--bg);
   }
 
   .lace-wrap {
     position: relative;
     width: 100%;
-    isolation: isolate;
   }
 
   .lace {
     width: 100%;
     display: block;
-    mix-blend-mode: multiply;
     filter: drop-shadow(0 18px 30px rgba(0,0,0,0.06));
-    position: relative;
-    z-index: 1;
   }
 
   .flower {
@@ -108,9 +103,7 @@
     top: -14%;
     left: -22%;
     width: 46%;
-    mix-blend-mode: multiply;
     pointer-events: none;
-    z-index: 2;
   }
 
   .studio-title {
@@ -120,9 +113,7 @@
     transform: translateX(-50%);
     width: 62%;
     max-width: 460px;
-    mix-blend-mode: multiply;
     pointer-events: none;
-    z-index: 3;
   }
 
   .stamp {
@@ -143,7 +134,6 @@
     transform: translateX(-50%);
     width: 70%;
     max-width: 560px;
-    mix-blend-mode: multiply;
     text-align: center;
   }
 
@@ -161,10 +151,7 @@
       row-gap: 18px;
       justify-content: space-between;
     }
-    .nav a:nth-child(1) img,
-    .nav a:nth-child(2) img,
-    .nav a:nth-child(3) img,
-    .nav a:nth-child(4) img { height: 22px; }
+    .nav a img { height: 22px; }
 
     .centerpiece { top: 22%; width: 78%; }
     .studio-title { top: 43%; width: 80%; }
@@ -179,23 +166,23 @@
   <div class="composition">
 
     <nav class="nav">
-      <a href="about.html" aria-label="About"><img src="Ayv_Website_white_back_about.png" alt="About"></a>
-      <a href="gallery.html" aria-label="Gallery"><img src="Ayv_Website_white_back_gallery.png" alt="Gallery"></a>
-      <a href="contact.html" aria-label="Contact"><img src="Ayv_Website_white_back_contact.png" alt="Contact"></a>
-      <a href="love-notes.html" aria-label="Love Notes"><img src="Ayv_Website_white_back_love_notes.png" alt="Love Notes"></a>
+      <a href="about.html" aria-label="About"><img src="assets/about.png" alt="About"></a>
+      <a href="gallery.html" aria-label="Gallery"><img src="assets/gallery.png" alt="Gallery"></a>
+      <a href="contact.html" aria-label="Contact"><img src="assets/contact.png" alt="Contact"></a>
+      <a href="love-notes.html" aria-label="Love Notes"><img src="assets/love_notes.png" alt="Love Notes"></a>
     </nav>
 
     <div class="centerpiece">
       <div class="lace-wrap">
-        <img class="flower" src="Ayv_Website_white_back_flower.png" alt="">
-        <img class="lace" src="Ayv_Website_white_back-10.png" alt="Ayv Studio lace">
-        <img class="studio-title" src="Ayv_Website_white_back_ayv_studio.png" alt="Ayv Studio">
-        <img class="stamp" src="Ayv_Website_white_back_stamp.png" alt="">
+        <img class="flower" src="assets/flower.png" alt="">
+        <img class="lace" src="assets/lace.png" alt="Ayv Studio lace">
+        <img class="studio-title" src="assets/ayv_studio.png" alt="Ayv Studio">
+        <img class="stamp" src="assets/stamp.png" alt="">
       </div>
     </div>
 
     <div class="tagline">
-      <img src="Ayv_Website_better_or_worse.png" alt="For better, for worse, and for everything in between.">
+      <img src="assets/tagline.png" alt="For better, for worse, and for everything in between.">
     </div>
 
   </div>
