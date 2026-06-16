@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ayv Studio</title>
+<style>
+  :root {
+    --bg: #f4f3f1;
+    --ink: #2b2b2b;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html, body {
+    background: var(--bg);
+    min-height: 100vh;
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+    color: var(--ink);
+  }
+
+  .stage {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6vh 5vw;
+  }
+
+  .composition {
+    position: relative;
+    width: 100%;
+    max-width: 1100px;
+    aspect-ratio: 16 / 10;
+  }
+
+  /* Nav row */
+  .nav {
+    position: absolute;
+    top: 2%;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
+  }
+
+  .nav a {
+    display: block;
+    height: 34px;
+    opacity: 0.78;
+    transition: opacity 0.25s ease, transform 0.25s ease;
+  }
+
+  .nav a:hover {
+    opacity: 1;
+    transform: translateY(-2px);
+  }
+
+  .nav img {
+    height: 100%;
+    width: auto;
+    display: block;
+    mix-blend-mode: multiply;
+  }
+
+  .nav a:nth-child(1) img { height: 30px; }
+  .nav a:nth-child(2) img { height: 30px; }
+  .nav a:nth-child(3) img { height: 30px; }
+  .nav a:nth-child(4) img { height: 30px; }
+
+  /* Lace + flowers centerpiece */
+  .centerpiece {
+    position: absolute;
+    top: 14%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: min(58%, 520px);
+  }
+
+  .lace-wrap {
+    position: relative;
+    width: 100%;
+  }
+
+  .lace {
+    width: 100%;
+    display: block;
+    mix-blend-mode: multiply;
+    filter: drop-shadow(0 18px 30px rgba(0,0,0,0.06));
+  }
+
+  .flower {
+    position: absolute;
+    top: -14%;
+    left: -22%;
+    width: 46%;
+    mix-blend-mode: multiply;
+    pointer-events: none;
+  }
+
+  .studio-title {
+    position: absolute;
+    top: 41%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 62%;
+    max-width: 460px;
+    mix-blend-mode: multiply;
+    pointer-events: none;
+  }
+
+  .stamp {
+    position: absolute;
+    bottom: -10%;
+    right: -10%;
+    width: 22%;
+    transform: rotate(-6deg);
+    filter: drop-shadow(0 6px 10px rgba(0,0,0,0.12));
+    pointer-events: none;
+  }
+
+  /* Tagline */
+  .tagline {
+    position: absolute;
+    bottom: 4%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70%;
+    max-width: 560px;
+    mix-blend-mode: multiply;
+    text-align: center;
+  }
+
+  .tagline img {
+    width: 100%;
+    display: block;
+  }
+
+  /* Responsive */
+  @media (max-width: 700px) {
+    .composition { aspect-ratio: 9 / 14; }
+
+    .nav {
+      flex-wrap: wrap;
+      row-gap: 18px;
+      justify-content: space-between;
+    }
+    .nav a:nth-child(1) img,
+    .nav a:nth-child(2) img,
+    .nav a:nth-child(3) img,
+    .nav a:nth-child(4) img { height: 22px; }
+
+    .centerpiece { top: 22%; width: 78%; }
+    .studio-title { top: 43%; width: 80%; }
+    .stamp { width: 26%; }
+    .tagline { width: 88%; bottom: 6%; }
+  }
+</style>
+</head>
+<body>
+
+<div class="stage">
+  <div class="composition">
+
+    <nav class="nav">
+      <a href="about.html" aria-label="About"><img src="assets/Ayv_Website_white_back_about.png" alt="About"></a>
+      <a href="gallery.html" aria-label="Gallery"><img src="assets/Ayv_Website_white_back_gallery.png" alt="Gallery"></a>
+      <a href="contact.html" aria-label="Contact"><img src="assets/Ayv_Website_white_back_contact.png" alt="Contact"></a>
+      <a href="love-notes.html" aria-label="Love Notes"><img src="assets/Ayv_Website_white_back_love_notes.png" alt="Love Notes"></a>
+    </nav>
+
+    <div class="centerpiece">
+      <div class="lace-wrap">
+        <img class="flower" src="assets/Ayv_Website_white_back_flower.png" alt="">
+        <img class="lace" src="assets/Ayv_Website_white_back-10.png" alt="Ayv Studio lace">
+        <img class="studio-title" src="assets/Ayv_Website_white_back_ayv_studio.png" alt="Ayv Studio">
+        <img class="stamp" src="assets/Ayv_Website_white_back_stamp.png" alt="">
+      </div>
+    </div>
+
+    <div class="tagline">
+      <img src="assets/Ayv_Website_better_or_worse.png" alt="For better, for worse, and for everything in between.">
+    </div>
+
+  </div>
+</div>
+
+</body>
+</html>
